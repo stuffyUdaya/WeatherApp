@@ -1,0 +1,24 @@
+<div style="text-align: center" class="alert alert-info">
+    Weather Forecast for <strong>{{resultsCtrl.vicinity}}</strong>
+</div>
+<div class="alert alert-info" style="text-align: center">
+  {{resultsCtrl.weeklyData.daily.summary}}
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4 newsLeft" ng-repeat="dailyInfo in resultsCtrl.weeklyData.daily.data ">
+        <div class="panel panel-primary box-shadow">
+            <div class="panel-heading text-center">
+                <h1>{{resultsCtrl.weeklyData.daily.data[$index].time * 1000 | date : 'longDate'}}</h1>
+                <span>{{resultsCtrl.weeklyData.daily.data[$index].summary}}</span>
+                <dark-sky-icon icon="{{ resultsCtrl.weeklyData.daily.data[$index].icon }}" style="font-size:20px"></dark-sky-icon>
+            </div>
+            <div class="panel-body" style="width: 390px;">
+                <span class="bold">Temperature Min :</span> <span>{{resultsCtrl.weeklyData.daily.data[$index].temperatureMin}} &#8457;</span>
+                <br/>
+                <span class="bold">Temperature Max : </span>  <span>{{resultsCtrl.weeklyData.daily.data[$index].temperatureMax}} &#8457;</span>
+                <br/>
+                <span class="bold">Wind Speed :</span> <span>{{resultsCtrl.weeklyData.daily.data[$index].windSpeed}} MPH</span>
+            </div>
+        </div>
+    </div>
+</div>

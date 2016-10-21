@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="WeatherApp">
+<head>
+    <meta charset="UTF-8">
+    <!--vendor styles-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="www/styles/vendor-styles/weather-icons.css">
+    <link rel="stylesheet" href="www/styles/vendor-styles/weather-icons-wind.css">
+    <link rel="stylesheet" href="www/styles/styles.css">
+    <title>Weather App</title>
+</head>
+<body>
+<header style="background-color: #2f5c84;color:azure">
+    <img class="img img-responsive img-rounded header-image" src="www/images/header.jpg">
+    <div class="page-header lead text-center"><strong>Weather Report</strong></div>
+</header>
+
+
+<div class="container-fluid">
+    <div ui-view="main-content"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDlg1UFSGK5Mmp9snHZCsxPflPU_FeWcuk"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<!--angular libraries-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+<!--custom files-->
+<script src="www/app.js"></script>
+
+<!--angular-router-->
+<script src="www/core/router/router.js"></script>
+
+<!--angular-controllers-->
+<script src="www/components/home/home-controller.js"></script>
+<script src="www/components/results/results-controller.js"></script>
+
+<!--Vendor Components-->
+<script src="www/vendor-components/darkSky.js"></script>
+<script src="www/vendor-components/ngAutoComplete.js"></script>
+</body>
+</html>
